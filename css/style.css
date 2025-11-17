@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&display=swap');
+
 body {
   background-color: #333;
   color: #eee;
@@ -7,7 +9,7 @@ body {
   flex-direction: column;
   margin: 0 auto;
   padding: 16px;
-  font-family: arial, sans-serif;
+  font-family: 'Atkinson Hyperlegible Next', arial, sans-serif;
   box-sizing: border-box;
 }
 
@@ -49,9 +51,17 @@ ul {
 
 .project-card {
   background-color: #444;
-  padding: 16px;
+  padding: 8px;
   border-radius: 8px;
   transition: transform 0.1s ease-in-out;
+}
+
+.project-card h3 {
+  margin: 4px;
+}
+
+.project-card p {
+  margin: 4px;
 }
 
 .project-card:hover {
