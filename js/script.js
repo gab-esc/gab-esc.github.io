@@ -1,13 +1,14 @@
 document.addEventListener("DOMContentLoaded", function() {
-  const placeholder = document.getElementById("header-placeholder");
+  const headerPlaceholder = document.getElementById("header-placeholder");
+  const footerPlaceholder = document.getElementById("footer-placeholder");
 
   fetch("nav.html")
     .then(response => response.text())
     .then(data => {
-      placeholder.innerHTML = data;
+      headerPlaceholder.innerHTML = data;
 
       const currentPage = window.location.pathname.split("/").pop();
-      const navLinks = placeholder.querySelectorAll("nav a");
+      const navLinks = headerPlaceholder.querySelectorAll("nav a");
 
       navLinks.forEach(link => {
         const linkPage = link.getAttribute("href").split("/").pop();
@@ -16,5 +17,11 @@ document.addEventListener("DOMContentLoaded", function() {
           link.classList.add("active");
         }
       });
+    });
+
+  fetch("footer.html")
+    .then(response => response.text())
+    .then(data => {
+      footerPlaceholder.innerHTML = data;
     });
 });

@@ -2,9 +2,13 @@ body {
   background-color: #333;
   color: #eee;
   max-width: 800px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   margin: 0 auto;
   padding: 16px;
   font-family: arial, sans-serif;
+  box-sizing: border-box;
 }
 
 nav a {
@@ -23,8 +27,16 @@ header {
   align-items: center;
 }
 
+main {
+  flex-grow: 1;
+}
+
 section {
   margin-top: 40px;
+}
+
+footer {
+  text-align: center;
 }
 
 ul {
