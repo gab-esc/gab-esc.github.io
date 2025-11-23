@@ -34,10 +34,12 @@ async function loadHeader() {
     console.error("Could not load nav:", error);
   }
 
-  const currentPage = window.location.pathname.split("/").pop();
+  console.log(window.location.pathname)
+
+  const currentPage = normalizePath(window.location.pathname);
   const navLinks = headerPlaceholder.querySelectorAll("nav a");
   navLinks.forEach(link => {
-    const linkPage = link.getAttribute("href").split("/").pop();
+    const linkPage = normalizePath(link.getAttribute("href"));
 
     if (linkPage === currentPage) {
       link.classList.add("active");
@@ -54,4 +56,9 @@ async function loadFooter() {
   } catch (error) {
     console.error("Could not load footer:", error);
   }
+}
+
+function normalizePath(path) {
+  const normalized_path = path.replace("index.html", "");
+  return normalized_path;
 }
