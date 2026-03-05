@@ -2,119 +2,138 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projetos | Gab Escape</title>
-  <link rel="stylesheet" href="/css/style.css">
-  <link rel="icon" href="/img/favicon.png" type="image/png">
+  <meta charset="UTF-8">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <meta content="O escape do Gabriel." name="description">
+  <link href="/custom.css" rel="stylesheet">
+  <link href="/favicon.ico" rel="icon">
+  <title>projetos | gab escape</title>
 </head>
 
 <body>
-  <div id="header-placeholder"></div>
+  <svg class="visually-hidden" xmlns="http://www.w3.org/2000/svg">
+    <filter id="x" height="500%">
+      <feTurbulence baseFrequency="0.01 0.02" numOctaves="2" result="t0"></feTurbulence>
+      <feDisplacementMap in="SourceGraphic" in2="t0" result="d0" scale="4"></feDisplacementMap>
+      <feComposite in="SourceGraphic" in2="d0" operator="atop" result="0"></feComposite>
+      <feTurbulence baseFrequency="1" numOctaves="2" result="t1"></feTurbulence>
+      <feDisplacementMap in="0" in2="t1" result="d1" scale="1"></feDisplacementMap>
+      <feComposite in="0" in2="d1" operator="atop" result="1"></feComposite>
+      <feOffset dx="-3" dy="-3" in="1"></feOffset>
+    </filter>
+  </svg>
+
+  <svg class="visually-hidden" xmlns="http://www.w3.org/2000/svg">
+    <filter id="xs">
+      <feTurbulence baseFrequency="0.01 0.02" numOctaves="2" result="t0"></feTurbulence>
+      <feDisplacementMap in="SourceGraphic" in2="t0" result="d0" scale="4"></feDisplacementMap>
+      <feComposite in="SourceGraphic" in2="d0" operator="atop" result="0"></feComposite>
+      <feTurbulence baseFrequency="1" numOctaves="2" result="t1"></feTurbulence>
+      <feDisplacementMap in="0" in2="t1" result="d1" scale="1"></feDisplacementMap>
+      <feComposite in="0" in2="d1" operator="atop" result="1"></feComposite>
+      <feOffset dx="-3" dy="-3" in="1"></feOffset>
+    </filter>
+  </svg>
+
+  <nav>
+    <a href="/">
+      <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 12 12">
+        <path fill="currentColor"
+          d="M1 12h9V8h1V6h-1v1H1V6H0v2h1Zm0-6h1V5H1Zm1 5V8h7v3H7V9H4v2Zm3 0v-1h1v1ZM2 5h1V4H2Zm7 1h1V1H7v2H3v1h5V2h1v2H8v1h1Zm0 0" />
+      </svg>
+    </a>
+
+    <a href="/projects">
+      <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 12 12">
+        <path fill="currentColor"
+          d="M2 5H1v1h1Zm0 0h7V4H6V2H5v2H2Zm-1 7h2v-1H1Zm-1-1h1V6H0Zm3 0h5v-1H3Zm0-2h1V8h1V7H4V6H3v1H2v1h1Zm5 3h2v-1H8ZM6 8h1V7H6Zm1 1h1V8H7Zm0-2h1V6H7Zm1 1h1V7H8Zm2 3h1V6h-1ZM4 2h1V1H4Zm5 4h1V5H9Zm0 0" />
+      </svg>
+    </a>
+
+    <a href="/blog">
+      <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 12 12">
+        <path fill="currentColor"
+          d="M1 11H0v1h1Zm0 0h2v-1h1V9h3V8H6V7h1v1h1V5h1V4h1V3h1V1H9v1H8v1H7v1H6v1H5v1H4v1H3v1H2v1H1ZM0 9h1V7H0Zm1-2h1V5H1Zm3 4h4v-1H4ZM2 5h1V4H2Zm1-1h1V3H3Zm7 7h1V4h-1v5H8v1h2ZM4 3h3V2H4Zm0 0" />
+      </svg>
+    </a>
+
+    <a href="/about">
+      <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 12 12">
+        <path fill="currentColor"
+          d="M0 12h11v-2h-1v1H6v-1H5v1H1v-1H0Zm1-2h1V9H1Zm1-1h2V8H2Zm2 1h1V9H4Zm2 0h1V9H6ZM3 7h1V6H3Zm1 1h3V7H4ZM2 6h1V5h1V4H3V2H2Zm5 3h2V8H7Zm2 1h1V9H9ZM7 7h1V6H7ZM4 4h3V3H4Zm4 2h1V2H8v2H7v1h1ZM3 2h5V1H3Zm0 0" />
+      </svg>
+    </a>
+  </nav>
 
   <main>
+    <header class="home-header">
+      <h1>
+        <span>
+          <span class="xerox">meus jogos</span>
+        </span>
+      </h1>
+    </header>
+
     <section>
-      <ul class="project-grid">
-
-        <li class="project-card">
-          <a href="https://calembur.itch.io/muvuca">
-            <img src="/projects/muvuca/header.jpg" alt="Project screenshot">
-            <h3>Muvuca</h3>
-          </a>
+      <ul>
+        <li>
+          <a href="https://gabesc.itch.io/d-grav">D-Grav</a>
         </li>
 
-        <li class="project-card">
-          <a href="https://gabesc.itch.io/fim-de-tarde">
-            <img src="/projects/fim-de-tarde-header.png" alt="Project screenshot">
-            <h3>Fim de Tarde</h3>
-          </a>
+        <li>
+          <a href="https://calembur.itch.io/joana">Mãe Joana</a>
         </li>
 
-        <li class="project-card">
-          <a href="https://calembur.itch.io/zeppelin">
-            <img src="/projects/zeppelin.jpg" alt="Project screenshot">
-            <h3>Zeppelin</h3>
-          </a>
+        <li>
+          <a href="https://calembur.itch.io/muvuca">Muvuca</a>
         </li>
 
-        <li class="project-card">
-          <a href="https://calembur.itch.io/bitno">
-            <img src="/projects/bitno-header.png" alt="Project screenshot">
-            <h3>Bitno</h3>
-          </a>
+        <li>
+          <a href="https://gabesc.itch.io/fim-de-tarde">Fim de Tarde</a>
         </li>
 
-        <li class="project-card">
-          <a href="https://calembur.itch.io/baigon">
-            <img src="/projects/baigon-header.png" alt="Project screenshot">
-            <h3>Detetive Baigon</h3>
-          </a>
+        <li>
+          <a href="https://calembur.itch.io/cadebloco">Cadê meu Bloco?</a>
         </li>
 
-        <li class="project-card">
-          <a href="https://calembur.itch.io/joana">
-            <img src="/projects/joana-header.jpg" alt="Project screenshot">
-            <h3>Mãe Joana</h3>
-          </a>
+        <li>
+          <a href="https://calembur.itch.io/bitno">Bitno</a>
         </li>
 
-        <li class="project-card">
-          <a href="https://calembur.itch.io/bebe-yoka">
-            <img src="/projects/bebe-yoka-header.png" alt="Project screenshot">
-            <h3>Bebê Yoka</h3>
-          </a>
+        <li>
+          <a href="https://calembur.itch.io/zeppelin">Zeppelin</a>
         </li>
 
-        <li class="project-card">
-          <a href="https://gabesc.itch.io/on-the-beach">
-            <img src="/projects/on-the-beach-header.png" alt="Project screenshot">
-            <h3>On The Beach</h3>
-          </a>
+        <li>
+          <a href="https://calembur.itch.io/bebe-yoka">Bebê Yoka</a>
         </li>
 
-        <li class="project-card">
-          <a href="https://gabesc.itch.io/frozen-blood">
-            <img src="/projects/frozen-blood-header.png" alt="Project screenshot">
-            <h3>Frozen Blood</h3>
-          </a>
+        <li>
+          <a href="https://calembur.itch.io/baigon">Detetive Baigon</a>
         </li>
 
-        <li class="project-card">
-          <a href="https://gabesc.itch.io/asteroids-and-steroids">
-            <img src="/projects/asteroids-header.png" alt="Project screenshot">
-            <h3>Asteroids & Steroids</h3>
-          </a>
+        <li>
+          <a href="https://calembur.itch.io/polinoquil">Polinoquil</a>
         </li>
 
-        <li class="project-card">
-          <a href="#">
-            <img src="/projects/lasanha.png" alt="Project screenshot">
-            <h3>Lasanha</h3>
-          </a>
+        <li>
+          <a href="https://gabesc.itch.io/lasanha">Lasanha</a>
         </li>
 
-        <li class="project-card">
-          <a href="https://gabesc.itch.io/lasanha">
-            <img src="/projects/polinoquil.jpg" alt="Project screenshot">
-            <h3>Polinóquil</h3>
-          </a>
+        <li>
+          <a href="https://gabesc.itch.io/frozen-blood">Frozen Blood</a>
         </li>
 
-        <li class="project-card">
-          <a href="https://calembur.itch.io/cadebloco">
-            <img src="/projects/cade-meu-bloco-header.jpg" alt="Project screenshot">
-            <h3>Cadê Meu Bloco?</h3>
-          </a>
+        <li>
+          <a href="https://gabesc.itch.io/asteroids-and-steroids">Asteroids and Steroids</a>
         </li>
 
+        <li>
+          <a href="https://gabesc.itch.io/on-the-beach">On the Beach</a>
+        </li>
       </ul>
     </section>
-
   </main>
-
-  <div id="footer-placeholder"></div>
-
-  <script src="/js/script.js" defer> </script>
 </body>
 
 </html>

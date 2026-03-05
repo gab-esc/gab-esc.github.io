@@ -1,0 +1,100 @@
+:root {
+	--font: sans-serif;
+	--font-size: 1.2rem;
+	--text: #f1e6e6;
+	--background: #0d0d0d;
+	--primary: #9c0000;
+	--secondary: #981616;
+	--accent: #ee3333;
+}
+
+body {
+	margin: 2rem auto;
+	background-color: var(--background);
+	max-width: min(54rem, 85%);
+	color: var(--text);
+	font-family: var(--font);
+	font-size: var(--font-size);
+	line-height: 2;
+}
+
+nav {
+	display: flex;
+	align-items: center;
+	gap: 1.5rem;
+}
+
+nav a {
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+	color: var(--primary);
+	transition: 60ms;
+}
+
+nav a:hover {
+	color: var(--accent)
+}
+
+nav svg {
+	display: block;
+}
+
+main {
+	overflow-x: auto;
+	text-align: justify;
+}
+
+main a {
+	color: var(--text);
+	text-decoration: none;
+	box-shadow: inset 0 -.3em var(--primary), 0 .1em var(--primary);
+	text-shadow: 1px 0 var(--background), 0 1px var(--background), 1px 1px var(--background),
+		-1px 0 var(--background), 0 -1px var(--background), -1px -1px var(--background),
+		1px -1px var(--background), -1px 1px var(--background);
+	transition: 60ms;
+}
+
+main a:hover {
+	box-shadow: inset 0 -.3em var(--accent), 0 .1em var(--accent)
+}
+
+.visually-hidden {
+	position: absolute;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	pointer-events: none;
+}
+
+.home-header {
+	max-width: 35rem;
+	padding-top: 3rem;
+	padding-bottom: 2rem;
+}
+
+.home-header h1 {
+	font-weight: 900;
+	font-size: 2.44rem;
+	line-height: 1;
+	margin: 0;
+	color: var(--background);
+	filter: url(#xs);
+}
+
+.home-header h1>span {
+	background: var(--primary);
+	padding: 0.64rem;
+	-webkit-box-decoration-break: clone;
+	box-decoration-break: clone;
+}
+
+.xerox {
+	filter: url(#xs)
+}
+
+@media (min-width:62em) {
+	.home-header h1 {
+		filter: url(#x);
+	}
+}
