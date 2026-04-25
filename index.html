@@ -10,7 +10,6 @@
 
   <title>gab esc</title>
 
-  <link rel="prefetch" href="./projects/">
 </head>
 
 <body>
@@ -92,6 +91,38 @@
       Também gosto de escrever de vez em quando.
     </p>
   </main>
+
+  <script>
+    document.querySelector('a[href="./projects/"]').addEventListener('mouseenter', (e) => {
+      // Get the full URL of the link, handling cases where the user hovers over the inner SVG
+      const targetUrl = e.target.closest('a').href;
+
+      // 1. Try the heavy-duty Speculation Rules (Chrome/Edge)
+      if (HTMLScriptElement.supports && HTMLScriptElement.supports('speculationrules')) {
+        if (!document.getElementById('prerender-projects')) {
+          const script = document.createElement('script');
+          script.type = 'speculationrules';
+          script.id = 'prerender-projects';
+          script.textContent = JSON.stringify({
+            prerender: [{
+              source: "list",
+              urls: [targetUrl]
+            }]
+          });
+          document.head.appendChild(script);
+        }
+      } 
+      // 2. Fallback to standard prefetch (Firefox/Safari)
+      else {
+        if (!document.querySelector(`link[rel="prefetch"][href="${targetUrl}"]`)) {
+          const link = document.createElement('link');
+          link.rel = 'prefetch';
+          link.href = targetUrl;
+          document.head.appendChild(link);
+        }
+      }
+    }, { once: true }); // Ensure this only fires the very first time they hover
+  </script>
 </body>
 
 </html>
