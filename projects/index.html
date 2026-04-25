@@ -35,6 +35,18 @@
     </filter>
   </svg>
 
+  <svg class="visually-hidden" xmlns="http://www.w3.org/2000/svg">
+    <filter id="x-light" height="500%">
+      <feTurbulence baseFrequency="0.01 0.02" numOctaves="2" result="t0"></feTurbulence>
+      <feDisplacementMap in="SourceGraphic" in2="t0" result="d0" scale="1.5"></feDisplacementMap>
+      <feComposite in="SourceGraphic" in2="d0" operator="atop" result="0"></feComposite>
+      <feTurbulence baseFrequency="1" numOctaves="2" result="t1"></feTurbulence>
+      <feDisplacementMap in="0" in2="t1" result="d1" scale="0.5"></feDisplacementMap>
+      <feComposite in="0" in2="d1" operator="atop" result="1"></feComposite>
+      <feOffset dx="-1" dy="-1" in="1"></feOffset>
+    </filter>
+  </svg>
+
   <nav>
     <a href="/">
       <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 12 12">
@@ -75,63 +87,315 @@
     </header>
 
     <section>
-      <ul>
-        <li>
-          <a href="https://gabesc.itch.io/d-grav">D-Grav</a>
-        </li>
+      <div class="project-card">
+        <img src="/res/headers/muvuca.avif" alt="Muvuca">
+        <div class="project-card-container">
+          <h4>
+            <b>Muvuca | Wishlist agora!</b>
+          </h4>
+          <p>Controle o drone UvU e traga ordem ao caos terrestre nessa aventura única.</p>
+          <div class="project-info">
+            <div class="project-tags">
+              <div class="project-tag">Godot</div>
+              <div class="project-tag">Estratégia</div>
+            </div>
 
-        <li>
-          <a href="https://calembur.itch.io/joana">Mãe Joana</a>
-        </li>
+            <div class="project-links">
+              <a href="https://calembur.itch.io/muvuca">steam</a>|
+              <a href="https://calembur.itch.io/muvuca">itch.io</a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-        <li>
-          <a href="https://calembur.itch.io/muvuca">Muvuca</a>
-        </li>
+      <div class="project-card">
+        <img src="/res/headers/binho.avif" alt="Binho">
+        <div class="project-card-container">
+          <h4>
+            <b>Binho</b>
+          </h4>
+          <p></p>
+          <div class="project-info">
+            <div class="project-tags">
+              <div class="project-tag">Raylib</div>
+              <div class="project-tag">Plataforma</div>
+            </div>
 
-        <li>
-          <a href="https://gabesc.itch.io/fim-de-tarde">Fim de Tarde</a>
-        </li>
+            <div class="project-links">
+              <a href="https://felpojam.com/game/ddd37a1e-efcf-48dd-863d-5359ce90ae61">felpojam</a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-        <li>
-          <a href="https://calembur.itch.io/cadebloco">Cadê meu Bloco?</a>
-        </li>
+      <div class="project-card">
+        <img src="/res/headers/d-grav.avif" alt="D-Grav">
+        <div class="project-card-container">
+          <h4>
+            <b>D-Grav</b>
+          </h4>
+          <p>Recupere o controle de uma nave desgovernada para se salvar da colisão iminente, usando o poder da gravidade.</p>
+          <div class="project-info">
+            <div class="project-tags">
+              <div class="project-tag">PICO-8</div>
+              <div class="project-tag">Plataforma</div>
+              <div class="project-tag">Puzzle</div>
+            </div>
 
-        <li>
-          <a href="https://calembur.itch.io/bitno">Bitno</a>
-        </li>
+            <div class="project-links">
+              <a href="https://gabesc.itch.io/d-grav">itch.io</a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-        <li>
-          <a href="https://calembur.itch.io/zeppelin">Zeppelin</a>
-        </li>
+      <div class="project-card">
+        <img src="/res/headers/mae-joana.avif" alt="Mãe Joana">
+        <div class="project-card-container">
+          <h4>
+            <b>Mãe Joana</b>
+          </h4>
+          <p></p>
+          <div class="project-info">
+            <div class="project-tags">
+              <div class="project-tag">PICO-8</div>
+              <div class="project-tag">Plataforma</div>
+            </div>
 
-        <li>
-          <a href="https://calembur.itch.io/bebe-yoka">Bebê Yoka</a>
-        </li>
+            <div class="project-links">
+              <a href="https://calembur.itch.io/joana">itch.io</a>|
+              <a href="https://www.lexaloffle.com/bbs/?tid=144289">lexaloffle</a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-        <li>
-          <a href="https://calembur.itch.io/baigon">Detetive Baigon</a>
-        </li>
+      <div class="project-card">
+        <img src="/res/headers/fim-de-tarde.avif" alt="Fim de Tarde">
+        <div class="project-card-container">
+          <h4>
+            <b>Fim de Tarde</b>
+          </h4>
+          <p>Resolva quebra-cabeças que misturam os mundos de diferentes brinquedos.</p>
+          <div class="project-info">
+            <div class="project-tags">
+              <div class="project-tag">Unity</div>
+              <div class="project-tag">Puzzle</div>
+            </div>
 
-        <li>
-          <a href="https://calembur.itch.io/polinoquil">Polinoquil</a>
-        </li>
+            <div class="project-links">
+              <a href=""https://gabesc.itch.io/fim-de-tarde>itch.io</a>|
+              <a href="https://github.com/gab-esc/fim-de-tarde">github</a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-        <li>
-          <a href="https://gabesc.itch.io/lasanha">Lasanha</a>
-        </li>
+      <div class="project-card">
+        <img src="/res/headers/cade-meu-bloco.avif" alt="Cadê meu Bloco?">
+        <div class="project-card-container">
+          <h4>
+            <b>Cadê meu Bloco?</b>
+          </h4>
+          <p></p>
+          <div class="project-info">
+            <div class="project-tags">
+              <div class="project-tag">Godot</div>
+              <div class="project-tag">Estrátegia</div>
+            </div>
 
-        <li>
-          <a href="https://gabesc.itch.io/frozen-blood">Frozen Blood</a>
-        </li>
+            <div class="project-links">
+              <a href="https://calembur.itch.io/cadebloco">itch.io</a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-        <li>
-          <a href="https://gabesc.itch.io/asteroids-and-steroids">Asteroids and Steroids</a>
-        </li>
 
-        <li>
-          <a href="https://gabesc.itch.io/on-the-beach">On the Beach</a>
-        </li>
-      </ul>
+      <div class="project-card">
+        <img src="/res/headers/bitno.avif" alt="Bitno">
+        <div class="project-card-container">
+          <h4>
+            <b>Bitno</b>
+          </h4>
+          <p></p>
+          <div class="project-info">
+            <div class="project-tags">
+              <div class="project-tag">Unity</div>
+              <div class="project-tag">Puzzle</div>
+            </div>
+
+            <div class="project-links">
+              <a href="https://calembur.itch.io/bitno">itch.io</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="/res/headers/zeppelin.avif" alt="Zeppelin">
+        <div class="project-card-container">
+          <h4>
+            <b>Zeppelin</b>
+          </h4>
+          <p></p>
+          <div class="project-info">
+            <div class="project-tags">
+              <div class="project-tag">Godot</div>
+              <div class="project-tag">2D Top-Down</div>
+              <div class="project-tag">Estrátegia</div>
+            </div>
+
+            <div class="project-links">
+              <a href="https://calembur.itch.io/zeppelin">itch.io</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="/res/headers/bebe-yoka.avif" alt="Bebê Yoka">
+        <div class="project-card-container">
+          <h4>
+            <b>Bebê Yoka</b>
+          </h4>
+          <p></p>
+          <div class="project-info">
+            <div class="project-tags">
+              <div class="project-tag">GameMaker</div>
+              <div class="project-tag">Estrátegia</div>
+            </div>
+
+            <div class="project-links">
+              <a href="https://calembur.itch.io/muvuca">steam</a>|
+              <a href="https://calembur.itch.io/muvuca">itch.io</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="/res/headers/detetive-baigon.avif" alt="Detetive Baigon">
+        <div class="project-card-container">
+          <h4>
+            <b>Detetive Baigon</b>
+          </h4>
+          <p></p>
+          <div class="project-info">
+            <div class="project-tags">
+              <div class="project-tag">Godot</div>
+              <div class="project-tag">Mistério</div>
+              <div class="project-tag">Detetive</div>
+            </div>
+
+            <div class="project-links">
+              <a href="https://calembur.itch.io/baigon">itch.io</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="/res/headers/polinoquil.avif" alt="Polinoquil">
+        <div class="project-card-container">
+          <h4>
+            <b>Polinoquil</b>
+          </h4>
+          <p></p>
+          <div class="project-info">
+            <div class="project-tags">
+              <div class="project-tag">Godot</div>
+              <div class="project-tag">Estrátegia</div>
+            </div>
+
+            <div class="project-links">
+              <a href="https://calembur.itch.io/polinoquil">itch.io</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="/res/headers/lasanha.avif" alt="Lasanha">
+        <div class="project-card-container">
+          <h4>
+            <b>Lasanha</b>
+          </h4>
+          <p></p>
+          <div class="project-info">
+            <div class="project-tags">
+              <div class="project-tag">PICO-8</div>
+            </div>
+
+            <div class="project-links">
+              <a href="https://gabesc.itch.io/lasanha">itch.io</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="/res/headers/frozen-blood.avif" alt="Frozen Blood">
+        <div class="project-card-container">
+          <h4>
+            <b>Frozen Blood</b>
+          </h4>
+          <p></p>
+          <div class="project-info">
+            <div class="project-tags">
+              <div class="project-tag">Unity</div>
+              <div class="project-tag">FPS</div>
+              <div class="project-tag">3D</div>
+            </div>
+
+            <div class="project-links">
+              <a href="https://gabesc.itch.io/frozen-blood">itch.io</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="/res/headers/asteroids-and-steroids.avif" alt="Asteroids and Steroids">
+        <div class="project-card-container">
+          <h4>
+            <b>Asteroids and Steroids</b>
+          </h4>
+          <p></p>
+          <div class="project-info">
+            <div class="project-tags">
+              <div class="project-tag">Unity</div>
+              <div class="project-tag">2D</div>
+              <div class="project-tag">Estrátegia</div>
+            </div>
+
+            <div class="project-links">
+              <a href="https://gabesc.itch.io/asteroids-and-steroids">itch.io</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="/res/headers/on-the-beach.avif" alt="On the Beach">
+        <div class="project-card-container">
+          <h4>
+            <b>On the Beach</b>
+          </h4>
+          <p></p>
+          <div class="project-info">
+            <div class="project-tags">
+              <div class="project-tag">Godot</div>
+              <div class="project-tag">Puzzle</div>
+              <div class="project-tag">Arte tradicional</div>
+            </div>
+
+            <div class="project-links">
+              <a href="https://gabesc.itch.io/on-the-beach">itch.io</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 </body>
