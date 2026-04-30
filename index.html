@@ -8,8 +8,7 @@
   <link href="/custom.css" rel="stylesheet">
   <link href="/favicon.ico" rel="icon">
 
-  <title>gab esc</title>
-
+  <title>Gab Esc</title>
 </head>
 
 <body>
@@ -72,13 +71,13 @@
     <header class="home-header">
       <h1>
         <span>
-          <span class="xerox">gab esc</span>
+          <span class="xerox">Gab Esc</span>
         </span>
       </h1>
     </header>
 
     <p>
-      Oioi! Sou o Gab, um desenvolvedor de jogos independentes.
+      Sou o Gabriel, um desenvolvedor de jogos independentes.
       <br>
       Meu foco é programação e game design, mas faço um pouco de tudo.
       <br>
@@ -91,38 +90,6 @@
       Também gosto de escrever de vez em quando.
     </p>
   </main>
-
-  <script>
-    document.querySelector('a[href="./projects/"]').addEventListener('mouseenter', (e) => {
-      // Get the full URL of the link, handling cases where the user hovers over the inner SVG
-      const targetUrl = e.target.closest('a').href;
-
-      // 1. Try the heavy-duty Speculation Rules (Chrome/Edge)
-      if (HTMLScriptElement.supports && HTMLScriptElement.supports('speculationrules')) {
-        if (!document.getElementById('prerender-projects')) {
-          const script = document.createElement('script');
-          script.type = 'speculationrules';
-          script.id = 'prerender-projects';
-          script.textContent = JSON.stringify({
-            prerender: [{
-              source: "list",
-              urls: [targetUrl]
-            }]
-          });
-          document.head.appendChild(script);
-        }
-      } 
-      // 2. Fallback to standard prefetch (Firefox/Safari)
-      else {
-        if (!document.querySelector(`link[rel="prefetch"][href="${targetUrl}"]`)) {
-          const link = document.createElement('link');
-          link.rel = 'prefetch';
-          link.href = targetUrl;
-          document.head.appendChild(link);
-        }
-      }
-    }, { once: true }); // Ensure this only fires the very first time they hover
-  </script>
 </body>
 
 </html>
